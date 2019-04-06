@@ -2,6 +2,7 @@ const decompress = require('decompress');
 const download = require('download');
 const cp = require('extra-cp');
 const fs = require('extra-fs');
+const path = require('path');
 
 
 
@@ -15,7 +16,7 @@ async function decompressUrl(url, dir) {
   var out = path.join(dir, path.basename(url));
   var ans = await download(url, dir, {extract: true});
   await fs.remove(out);
-  await cp.dehuskDir(dir);
+  await fs.dehuskDir(dir);
   return ans;
 }
 
@@ -30,9 +31,9 @@ async function decompressFile(file, dir) {
 
 async function decompressAny(input, output, options) {
   if(typeof input==='string') return decompress(input, output, options);
-  var {gitUrl, fileUrl, fileUpload} = options, output = output||'.';
-  if(fs.existsSync(dir)) await fs.remove(dir+'/*');
-  else await fs.mkdirp(dir);
+  var {gitUrl, fileUrl, fileUpload} = input, output = output||'.';
+  if(fs.existsSync(output)) await fs.remove(output+'/*');
+  else await fs.mkdirp(output);
   if(gitUrl) return decompressGit(gitUrl, output);
   if(fileUrl) return decompressUrl(fileUrl, output);
   return decompressFile(fileUpload, output);
