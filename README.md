@@ -30,7 +30,7 @@ const decompress = require('extra-decompress');
 
 
 decompress(input, [output=.], [options={}]);
-- input: {gitUrl | fileUrl | fileUpload} | localFile <string>
+- input: {gitUrl | fileUrl | fileUpload | file} | localFile <string>
 - output: <string> (output directory)
 - options: {filter, map, plugins, strip} (see "decompress")
 -> Promise
