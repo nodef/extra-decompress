@@ -30,7 +30,7 @@ async function decompressFile(file, dir) {
 
 async function decompressAny(input, output, options) {
   if(typeof input==='string') return decompress(input, output, options);
-  var {gitUrl, fileUrl, fileUpload} = options;
+  var {gitUrl, fileUrl, fileUpload} = options, output = output||'.';
   if(fs.existsSync(dir)) await fs.remove(dir+'/*');
   else await fs.mkdirp(dir);
   if(gitUrl) return decompressGit(gitUrl, output);
