@@ -1,0 +1,19 @@
+{
+  "name": "extra-decompress",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-decompress.git"
+  },
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/extra-decompress/issues"
+  },
+  "homepage": "https://github.com/nodef/extra-decompress#readme"
+}
