@@ -1,6 +1,6 @@
 {
   "name": "extra-decompress",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Decompress Git URL, File URL, File Upload, or Local File, using decompress module.",
   "main": "index.js",
   "scripts": {
