@@ -23,16 +23,24 @@ async function testFileUpload() {
   await decompress({fileUpload}, 'build/fileUpload');
 }
 
-async function testLocalFile() {
+async function testFile() {
   var url = 'https://github.com/nodef/extra-decompress/archive/master.zip';
-  await download(url, 'build/localFile', {filename: 'master.zip'});
-  await decompress(path.join('build/localFile', path.basename(url)), 'build/localFile');
+  await download(url, 'build/file', {filename: 'master.zip'});
+  var file = 'build/file/master.zip';
+  await decompress({file}, 'build/file/inside');
+}
+
+async function testString() {
+  var url = 'https://github.com/nodef/extra-decompress/archive/master.zip';
+  await download(url, 'build/string', {filename: 'master.zip'});
+  await decompress('build/string/master.zip', 'build/string/inside');
 }
 
 async function test() {
   await testGitUrl();
   await testFileUrl();
   await testFileUpload();
-  await testLocalFile();
+  await testFile();
+  await testString();
 }
 test();
