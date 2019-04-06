@@ -1,4 +1,4 @@
-Decompress Git URL, File URL, File Upload, or Local File, using decompress module.
+Decompress Git URL, File URL, File Upload, or Local File, using [decompress module].
 
 ```javascript
 const decompress = require('extra-decompress');
@@ -35,3 +35,9 @@ decompress(input, [output=.], [options={}]);
 - options: {filter, map, plugins, strip} (see "decompress")
 -> Promise
 ```
+<br>
+
+
+[![nodef](https://merferry.glitch.me/card/extra-decompress.svg)](https://nodef.github.io)
+
+[decompress module]: https://www.npmjs.com/package/decompress
