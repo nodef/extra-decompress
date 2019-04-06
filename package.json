@@ -1,7 +1,7 @@
 {
   "name": "extra-decompress",
-  "version": "0.0.1",
-  "description": "Test",
+  "version": "0.0.2",
+  "description": "Decompress Git URL, File URL, File Upload, or Local File, using decompress module.",
   "main": "index.js",
   "scripts": {
     "test": "exit"
@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/nodef/extra-decompress/issues"
   },
-  "homepage": "https://github.com/nodef/extra-decompress#readme"
+  "homepage": "https://github.com/nodef/extra-decompress#readme",
+  "keywords": [
+    "extra",
+    "decompress",
+    "git",
+    "url",
+    "file",
+    "upload",
+    "local",
+    "module",
+    "merferry"
+  ]
 }
