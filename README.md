@@ -39,5 +39,6 @@ decompress(input, [output=.], [options={}]);
 
 
 [![nodef](https://merferry.glitch.me/card/extra-decompress.svg)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/extra-decompress)
 
 [decompress module]: https://www.npmjs.com/package/decompress
